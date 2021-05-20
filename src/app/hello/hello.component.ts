@@ -22,7 +22,6 @@ export class HelloComponent {
   }
 
   addName(){
-    console.log("method addName");
     this.namesList.push(this.inputName);
     this.inputName = '';
     console.log(this.namesList);
