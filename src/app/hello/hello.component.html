@@ -16,5 +16,6 @@
 <p *ngFor="let item of namesList; index as i" (click)="onNameClick()"> 
   pipe | <br>
   {{i}} - Hello uppercase={{item | uppercase}}, slice:0:2={{item | slice:0:2}}! <br>
-  Primera leta en mayuscula: {{item | slice:0:1 | uppercase}} {{item | slice:1 | lowercase}}
+  Letra #1 mayuscula: {{item | slice:0:1 | uppercase}} {{item | slice:1 | lowercase}} <br>
+  Con el pipe: {{item | upperCapital}}
 </p>
