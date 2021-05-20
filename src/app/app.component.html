@@ -5,7 +5,10 @@
 
   <!-- event emitter -->
   <div [class.hidden]="myHelloComponent.inputName.length == 0">
-    Writting '{{myHelloComponent.inputName}}' in input component
+    <!-- property binding ngClass -->
+    <span [ngClass]="updateNameClassComponent(myHelloComponent.inputName)">
+      '{{myHelloComponent.inputName}}' 
+    </span>  in input component
   </div>
   <br>
   
