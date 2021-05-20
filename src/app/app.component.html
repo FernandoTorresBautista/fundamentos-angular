@@ -15,13 +15,8 @@
     Writting '{{myHelloComponent.inputName}}' in input component
   </div>
   <br>
-  <custom-hello #myHelloComponent [name]='MyName' (sayHello)="onSayHello($event)"></custom-hello>
-
-  <!-- componentes reutilizables -->
-  <custom-hello name="a"></custom-hello>
-  <custom-hello name="b"></custom-hello>
-  <custom-hello name="c"></custom-hello>
-
-  <custom-hello *ngFor="let grettingName of ['d','e']" [name]="grettingName"></custom-hello>
+  
+  <custom-hello #myHelloComponent (sayHello)="onSayHello($event)">
+  </custom-hello>
 
 </div>

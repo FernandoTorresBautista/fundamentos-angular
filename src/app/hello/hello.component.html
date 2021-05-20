@@ -1,11 +1,8 @@
 <div>
-  <!--input type="text" [value]="inputName" (keyup)="updateInputName($event)"-->
   <input type="text" [(ngModel)]="inputName">
   <button (onclick)="addName()">Add name</button>
 </div>
 
-<!-- binding click -->
-<p (click)="onNameClick()"> 
-  <!-- Hello Fernando 1 -->
-  Hello {{name}}! 
+<p *ngFor="let item of namesList; index as i" (click)="onNameClick()"> 
+  {{i}} - Hello {{item}}! 
 </p>

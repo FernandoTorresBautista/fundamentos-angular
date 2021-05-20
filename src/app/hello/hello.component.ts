@@ -9,15 +9,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class HelloComponent {
 
-  @Input() name:string; // desde fuera del componente // input to receive an input name 
-  @Output() sayHello:EventEmitter<string> = new EventEmitter<string>();  // event emiter de eventos tipo string // decorador output e eventemiter
+  @Input() name:string; 
+  @Output() sayHello:EventEmitter<string> = new EventEmitter<string>();  
   
-  public namesList:Array<string> = []; // new EventEmitter<string>();
-  public inputName:string = ''; //public inputName:string = 'Example';
+  public namesList:Array<string> = []; 
+  public inputName:string = ''; 
 
-  constructor(){
-    //this.name = 'Fernando 2'; 
-  }
+  constructor(){}
 
   onNameClick(){
     this.sayHello.emit("Hello")
@@ -29,5 +27,4 @@ export class HelloComponent {
     this.inputName = '';
     console.log(this.namesList);
   }
-
 } 
