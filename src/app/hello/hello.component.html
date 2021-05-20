@@ -1,7 +1,16 @@
 <!--div-->
-<div *ngIf="namesList.length < 5">
-  <input type="text" [(ngModel)]="inputName">
-  <button (click)="addName()">Add name</button>
+<!--div *ngIf="namesList.length < 5"-->
+<!--div [ngSwitch]="namesList.length"-->
+<div [ngSwitch]="namesList.length < 5">
+  <!--div *ngSwitchDefault-->
+  <div *ngSwitchCase="true">
+    <input type="text" [(ngModel)]="inputName">
+    <button (click)="addName()">Add name</button>
+  </div>
+  <!--div *ngSwitchCase="5"-->
+  <div *ngSwitchCase="false">
+    <p>You can not add more than 5 names</p>
+  </div>
 </div>
 
 <p *ngFor="let item of namesList; index as i" (click)="onNameClick()"> 
