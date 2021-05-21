@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 
 import { HelloComponent } from './hello/hello.component';
 import { UpperCapitalPipe } from './hello/upper-capital.pipe';
-import { LoggerService } from './logger.service';
 import { GreetenService } from './greetings.service';
 
 @NgModule({
@@ -20,7 +19,7 @@ import { GreetenService } from './greetings.service';
     FormsModule
   ],
   providers: [
-    LoggerService, GreetenService
+    GreetenService
   ],
   bootstrap: [AppComponent]
 })
