@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { LoggerService } from './logger.service';
+import { GreetenService } from './greetings.service';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +10,12 @@ import { LoggerService } from './logger.service';
 export class AppComponent {
   public MyName:string='Fernando property bindings'; 
   public titleStyles:{};
-  public counter = 0;
 
-  constructor(private logger:LoggerService) {
+  constructor(private grettings:GreetenService) {
   }
 
   onSayHello(message) {
-    this.logger.log(message);
-    this.counter++;
+    this.grettings.handleGreeting(message);
     this.updateTitleStyles();
   }
 
@@ -34,7 +32,7 @@ export class AppComponent {
   updateTitleStyles() {
     this.titleStyles = {
       'margin-top': '40px',
-      'color': this.counter < 3 ? 'green':'goldenrod'
+      'color': this.grettings.counter < 3 ? 'green':'goldenrod'
     }
   }
 }
